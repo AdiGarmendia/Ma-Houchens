@@ -1,27 +1,39 @@
 import React, { useState } from "react";
 
-const Login = (props) => {
-	const [credentials, setCredentials] = useState({ email: "", password: "" });
+const Register = (props) => {
+	const [credentials, setCredentials] = useState({
+		employeeName: "",
+		email: "",
+		password: "",
+	});
 
-	// Update state whenever an input field is edited
 	const handleFieldChange = (evt) => {
 		const stateToChange = { ...credentials };
 		stateToChange[evt.target.id] = evt.target.value;
 		setCredentials(stateToChange);
 	};
 
-	const handleLogin = (e) => {
+	const handleRegister = (e) => {
 		e.preventDefault();
 
-		props.setUser(credentials);
+		props.setEmployee(credentials);
 		props.history.push("/home");
 	};
 
 	return (
-		<form onSubmit={handleLogin}>
+		<form onSubmit={handleRegister}>
 			<fieldset>
-				<h3>Please sign in</h3>
+				<h3>Please Register</h3>
 				<div className="formgrid">
+					<input
+						onChange={handleFieldChange}
+						type="employeeName"
+						id="employeeName"
+						placeholder="Employee Name"
+						required=""
+						autoFocus=""
+					/>
+					<label htmlFor="inputEmail">Email address</label>
 					<input
 						onChange={handleFieldChange}
 						type="email"
@@ -39,12 +51,11 @@ const Login = (props) => {
 						placeholder="Password"
 						required=""
 					/>
-					<label htmlFor="inputPassword">Password</label>
 				</div>
-				<button type="submit">Sign in</button>
+				<button type="submit">Register</button>
 			</fieldset>
 		</form>
 	);
 };
 
-export default Login;
+export default Register;
