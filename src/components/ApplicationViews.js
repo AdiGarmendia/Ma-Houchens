@@ -12,6 +12,12 @@ const ApplicationViews = () => {
 					return <Home />;
 				}}
 			/>
+			<Route
+				path="/login"
+				render={(props) => {
+					return <Login setEmployee={setEmployee} {...props} />;
+				}}
+			/>
 		</React.Fragment>
 	);
 };
