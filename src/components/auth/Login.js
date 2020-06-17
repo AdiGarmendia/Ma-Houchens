@@ -13,7 +13,7 @@ const Login = (props) => {
 	const handleLogin = (e) => {
 		e.preventDefault();
 
-		props.setUser(credentials);
+		props.setEmployee(credentials);
 		props.history.push("/home");
 	};
 
