@@ -5,6 +5,7 @@ import Login from "./auth/Login";
 import OffenderList from "./offenders/OffenderList";
 import OffenderForm from "./offenders/OffenderForm";
 import OffenderDetail from "./offenders/OffenderDetail";
+import OffenderEditForm from "./offenders/OffenderEditForm";
 
 const ApplicationViews = (props) => {
 	const hasEmployee = props.hasEmployee;
@@ -61,7 +62,7 @@ const ApplicationViews = (props) => {
 					return <OffenderForm {...props} />;
 				}}
 			/>
-			{/* <Route
+			<Route
 				path="/offenders/:offenderId(\d+)/edit"
 				render={(props) => {
 					if (hasEmployee) {
@@ -70,7 +71,7 @@ const ApplicationViews = (props) => {
 						return <Redirect to="/login" />;
 					}
 				}}
-			/> */}
+			/>
 		</React.Fragment>
 	);
 };

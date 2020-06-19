@@ -15,6 +15,7 @@ const OffenderDetail = (props) => {
 			setIsLoading(false);
 		});
 	}, [props.offenderId]);
+
 	const handleDelete = () => {
 		setIsLoading(true);
 		OffenderManager.delete(props.offenderId).then(() =>

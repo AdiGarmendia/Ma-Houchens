@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EmployeeManager from "../../modules/EmployeeManager";
 
 const Login = (props) => {
 	const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -12,7 +13,15 @@ const Login = (props) => {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-
+		// if (credentials.email === "" || credentials.password === "") {
+		// 	window.alert("Employee Login");
+		// } else {
+		// 	EmployeeManager.getEmployee(credentials.email).then((employee) => {
+		// 		console.log(employee);
+		// 		localStorage.setEmployee("credentials", employee[0].id);
+		// 		props.history.push("/offenders");
+		// 	});
+		// }
 		props.setEmployee(credentials);
 		props.history.push("/home");
 	};
@@ -20,7 +29,7 @@ const Login = (props) => {
 	return (
 		<form onSubmit={handleLogin}>
 			<fieldset>
-				<h3>Please sign in</h3>
+				<h3>Employee Log In</h3>
 				<div className="formgrid">
 					<input
 						onChange={handleFieldChange}
@@ -41,7 +50,7 @@ const Login = (props) => {
 					/>
 					<label htmlFor="inputPassword">Password</label>
 				</div>
-				<button type="submit">Sign in</button>
+				<button type="submit">Log in</button>
 			</fieldset>
 		</form>
 	);

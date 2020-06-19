@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088";
 
 export default {
-	get(email) {
+	getEmployee(email) {
 		return fetch(`${remoteURL}/employees/${email}`).then((result) =>
 			result.json()
 		);
