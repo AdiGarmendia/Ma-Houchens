@@ -17,9 +17,9 @@ const OffenderDetail = (props) => {
 	}, [props.offenderId]);
 	const handleDelete = () => {
 		setIsLoading(true);
-		offenderManager
-			.delete(props.offenderId)
-			.then(() => props.history.push("/offenders"));
+		OffenderManager.delete(props.offenderId).then(() =>
+			props.history.push("/offenders")
+		);
 	};
 
 	return (

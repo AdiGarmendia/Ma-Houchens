@@ -9,7 +9,7 @@ const OffenderCard = (props) => {
 				<h3>
 					Name: <span className="card-offendername">{props.offender.name}</span>
 				</h3>
-				<p>Breed: {props.offender.breed}</p>
+				<p>Offense: {props.offender.offense}</p>
 				<Link to={`/offenders/${props.offender.id}`}>
 					<button>Details</button>
 				</Link>
@@ -25,7 +25,7 @@ const OffenderCard = (props) => {
 					type="button"
 					onClick={() => props.deleteOffender(props.offender.id)}
 				>
-					Discharge
+					Lift Ban
 				</button>
 			</div>
 		</div>

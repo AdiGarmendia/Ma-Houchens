@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import OffenderManager from "../../modules/OffenderManager";
+import OffenderCard from "./OffenderCard";
 
 const OffenderList = (props) => {
 	const [offenders, setOffenders] = useState([]);
@@ -30,7 +31,7 @@ const OffenderList = (props) => {
 						props.history.push("/offenders/new");
 					}}
 				>
-					Admit offender
+					Add offender
 				</button>
 			</section>
 			<div className="container-cards">

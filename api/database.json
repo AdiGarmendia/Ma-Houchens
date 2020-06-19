@@ -1,17 +1,27 @@
 {
-	"employees": [
-		{
-			"id": 1,
-			"employeeName": "Ron Swanson",
-			"email": "no@mhs.com",
-			"password": 1234
-		}
-	],
-	"offenders": [
-		{
-			"id": 1,
-			"name": "Madi Pepper",
-			"offense": "Intellectual Property Theft"
-		}
-	]
+  "employees": [
+    {
+      "id": 1,
+      "employeeName": "Ron Swanson",
+      "email": "no@mhs.com",
+      "password": 1234
+    }
+  ],
+  "offenders": [
+    {
+      "id": 1,
+      "name": "Madi Pepper",
+      "offense": "Intellectual Property Theft"
+    },
+    {
+      "id": 2,
+      "name": "Sage Klein",
+      "offense": "Dancing to Goodbye Horse in the Skin Care Aisle"
+    },
+    {
+      "id": 3,
+      "name": "Bryan Nielsen",
+      "offense": "Tried to high five a quadrapelegic"
+    }
+  ]
 }

@@ -7,7 +7,7 @@ const OffenderForm = (props) => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const handleFieldChange = (evt) => {
-		const stateToChange = { ...animal };
+		const stateToChange = { ...offender };
 		stateToChange[evt.target.id] = evt.target.value;
 		setOffender(stateToChange);
 	};
