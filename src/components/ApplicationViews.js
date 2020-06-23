@@ -61,12 +61,6 @@ const ApplicationViews = (props) => {
 				}}
 			/>
 			<Route
-				path="/offenders/new"
-				render={(props) => {
-					return <OffenderForm {...props} />;
-				}}
-			/>
-			<Route
 				path="/offenders/:offenderId(\d+)/edit"
 				render={(props) => {
 					if (hasEmployee) {
