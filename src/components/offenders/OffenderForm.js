@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import OffenderManager from "../../modules/OffenderManager";
+import LocationManager from "../../modules/LocationManager";
 import "./OffenderForm.css";
 
 const OffenderForm = (props) => {
-	const [offender, setOffender] = useState({ name: "", offense: "" });
+	const [offender, setOffender] = useState({
+		name: "",
+		gender: "",
+		age: "",
+		offense: "",
+		date: "",
+		dateEnd: "",
+		locationId: "",
+	});
+	const [locations, setLocations] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
+
+	const getLocations = () => {
+		return LocationManager.getAll().then((local) => {
+			setLocations(local);
+		});
+	};
 
 	const handleFieldChange = (evt) => {
 		const stateToChange = { ...offender };
@@ -24,6 +40,10 @@ const OffenderForm = (props) => {
 		}
 	};
 
+	useEffect(() => {
+		getLocations();
+	}, []);
+
 	return (
 		<>
 			<form>
@@ -41,10 +61,50 @@ const OffenderForm = (props) => {
 							type="text"
 							required
 							onChange={handleFieldChange}
+							id="gender"
+							placeholder="Gender"
+						/>
+						<label htmlFor="Gender">Gender</label>
+						<input
+							type="text"
+							required
+							onChange={handleFieldChange}
+							id="age"
+							placeholder="Age"
+						/>
+						<label htmlFor="Age">Age</label>
+						<input
+							type="text"
+							required
+							onChange={handleFieldChange}
 							id="offense"
 							placeholder="offense"
 						/>
 						<label htmlFor="offense">offense</label>
+						<input
+							type="date"
+							required
+							onChange={handleFieldChange}
+							id="date"
+							placeholder="date"
+						/>
+						<label htmlFor="Date Committed">Date Committed</label>
+						<input
+							type="date"
+							required
+							onChange={handleFieldChange}
+							id="dateEnd"
+							placeholder="date"
+						/>
+						<label htmlFor="Date Ban Ends">Date Ban Ends</label>
+						<select id="locationId" onChange={handleFieldChange}>
+							<option value="">Store</option>
+							{locations.map((local) => (
+								<option key={local.id} value={local.id}>
+									{local.store}
+								</option>
+							))}
+						</select>
 					</div>
 					<div className="alignRight">
 						<button

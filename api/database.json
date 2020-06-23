@@ -9,34 +9,46 @@
 	],
 	"offenders": [
 		{
+			"name": "Adrian Garmendia",
+			"gender": "Male",
+			"age": "45",
+			"offense": "Stole 3.50 and a jawbreaker",
+			"date": "2020-06-01",
+			"dateEnd": "2021-06-01",
+			"locationId": "2",
+			"id": 1
+		},
+		{
+			"name": "Sage Klein",
+			"gender": "Female",
+			"age": "37",
+			"offense": "Dancing to Goodbye Horses in the skin care aisle",
+			"date": "2000-02-22",
+			"dateEnd": "2041-02-22",
+			"locationId": "1",
+			"id": 2
+		},
+		{
+			"name": "Bryan Nilsen",
+			"gender": "Male",
+			"age": "42",
+			"offense": "Singing Shout at the Devil to customers in the hallmark card section.",
+			"date": "2020-01-08",
+			"dateEnd": "2020-08-26",
+			"locationId": "2",
+			"id": 3
+		}
+	],
+	"locations": [
+		{
 			"id": 1,
-			"name": "Madi Pepper",
-			"offense": "Kept yelling at the old men \"Come on Higgy Baby\"",
-			"employeeId": 1
+			"store": "Glasgow",
+			"address": "123 Fais Do-Do Dr"
 		},
 		{
 			"id": 2,
-			"name": "Sage Klein",
-			"offense": "Dancing to Goodbye Horse in the Skin Care Aisle",
-			"employeeId": 1
-		},
-		{
-			"id": 3,
-			"name": "Bryan Nielsen",
-			"offense": "Tried to high five a quadrapelegic",
-			"employeeId": 1
-		},
-		{
-			"name": "Roxanne Nastray",
-			"offense": "Stole kittens from the adopt a kitten people",
-			"id": 4,
-			"employeeId": 1
-		},
-		{
-			"name": "Sophia Law",
-			"offense": "Aided and abetted Roxanne",
-			"id": 5,
-			"employeeId": 1
+			"store": "Portland",
+			"address": "123 Rougaroo Dr"
 		}
 	]
 }

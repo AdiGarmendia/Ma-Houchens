@@ -68,10 +68,48 @@ const OffenderEditForm = (props) => {
 							required
 							className="form-control"
 							onChange={handleFieldChange}
+							id="gender"
+							value={offender.gender}
+						/>
+						<label htmlFor="gender">Gender</label>
+
+						<input
+							type="text"
+							required
+							className="form-control"
+							onChange={handleFieldChange}
+							id="age"
+							value={offender.age}
+						/>
+						<label htmlFor="age">Age</label>
+
+						<input
+							type="text"
+							required
+							className="form-control"
+							onChange={handleFieldChange}
 							id="offense"
 							value={offender.offense}
 						/>
 						<label htmlFor="offense">Offense</label>
+						<input
+							type="date"
+							required
+							className="form-control"
+							onChange={handleFieldChange}
+							id="date"
+							value={offender.date}
+						/>
+						<label htmlFor="date committed">Date Committed</label>
+						<input
+							type="date"
+							required
+							className="form-control"
+							onChange={handleFieldChange}
+							id="dateEnd"
+							value={offender.dateEnd}
+						/>
+						<label htmlFor="date ends">Date Ban Ends</label>
 						<select
 							className="form-control"
 							id="employeeId"

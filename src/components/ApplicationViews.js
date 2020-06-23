@@ -6,6 +6,10 @@ import OffenderList from "./offenders/OffenderList";
 import OffenderForm from "./offenders/OffenderForm";
 import OffenderDetail from "./offenders/OffenderDetail";
 import OffenderEditForm from "./offenders/OffenderEditForm";
+import LocationDetail from "./locations/LocationDetail";
+import LocationForm from "./locations/LocationForm";
+import LocationList from "./locations/LocationList";
+import EmployeeList from "./employees/EmployeeList";
 
 const ApplicationViews = (props) => {
 	const hasEmployee = props.hasEmployee;
@@ -67,6 +71,38 @@ const ApplicationViews = (props) => {
 				render={(props) => {
 					if (hasEmployee) {
 						return <OffenderEditForm {...props} />;
+					} else {
+						return <Redirect to="/login" />;
+					}
+				}}
+			/>
+			<Route
+				exact
+				path="/location"
+				render={(props) => {
+					return <LocationList {...props} />;
+				}}
+			/>
+			<Route
+				exact
+				path="/location/:locationId(\d+)"
+				render={(props) => {
+					// Pass the animalId to the AnimalDetailComponent
+					return (
+						<LocationDetail
+							locationId={parseInt(props.match.params.locationId)}
+							{...props}
+						/>
+					);
+				}}
+			/>
+
+			<Route
+				exact
+				path="/employees"
+				render={(props) => {
+					if (hasEmployee) {
+						return <EmployeeList {...props} />;
 					} else {
 						return <Redirect to="/login" />;
 					}

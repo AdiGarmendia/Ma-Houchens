@@ -1,26 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const LocationCard = (props) => {
+	console.log(props.local);
 	return (
 		<div className="card">
 			<div className="locationCard-content">
 				<address>
-					{props.location.area}
+					{props.local.store}
 					<br />
-					{props.location.address}
+					{props.local.address}
 				</address>
-				<Link to={`/location/${props.location.id}`}>
-					<button>Details</button>
-				</Link>
-				<button
-					type="button"
-					onClick={() =>
-						props.history.push(`/location/${props.location.id}/edit`)
-					}
-				>
-					Edit
-				</button>
 			</div>
 		</div>
 	);
