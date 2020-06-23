@@ -17,19 +17,21 @@ const OffenderDetail = (props) => {
 
 	useEffect(() => {
 		OffenderManager.get(props.offenderId).then((offender) => {
-			setoffender({
-				name: offender.name,
-				gender: offender.gender,
-				age: offender.age,
-				offense: offender.offense,
-				date: offender.date,
-				dateEnd: offender.dateEnd,
-				locationId: LocationManager.get(offender.locationId).then((local) => {
-					console.log(local);
-					offender.local = local.store;
-				}),
+			LocationManager.get(offender.locationId).then((local) => {
+				console.log(local);
+				return (
+					setoffender({
+						name: offender.name,
+						gender: offender.gender,
+						age: offender.age,
+						offense: offender.offense,
+						date: offender.date,
+						dateEnd: offender.dateEnd,
+						location: local.store,
+					}),
+					setIsLoading(false)
+				);
 			});
-			setIsLoading(false);
 		});
 	}, [props.offenderId]);
 
@@ -51,7 +53,7 @@ const OffenderDetail = (props) => {
 				<p>Offense: {offender.offense}</p>
 				<p>Date Committed: {offender.date}</p>
 				<p>Ban Ends: {offender.dateEnd}</p>
-				<p>Location of Offense: {offender.local}</p>
+				<p>Location of Offense: {offender.location}</p>
 				<button type="button" disabled={isLoading} onClick={handleDelete}>
 					Lift Ban
 				</button>
