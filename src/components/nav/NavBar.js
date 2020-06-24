@@ -23,11 +23,11 @@ const NavBar = (props) => {
 						<NavLink
 							exact
 							className="nav-link"
-							to="/"
+							to="/chart"
 							activeClassName="selected"
 						>
 							{" "}
-							Home{" "}
+							Chart{" "}
 						</NavLink>
 					</li>
 					{props.hasEmployee ? (

@@ -10,6 +10,7 @@ import LocationDetail from "./locations/LocationDetail";
 import LocationForm from "./locations/LocationForm";
 import LocationList from "./locations/LocationList";
 import EmployeeList from "./employees/EmployeeList";
+import Chart from "./charts/Chart";
 
 const ApplicationViews = (props) => {
 	const hasEmployee = props.hasEmployee;
@@ -100,6 +101,13 @@ const ApplicationViews = (props) => {
 					} else {
 						return <Redirect to="/login" />;
 					}
+				}}
+			/>
+			<Route
+				exact
+				path="/chart"
+				render={(props) => {
+					return <Chart {...props} />;
 				}}
 			/>
 		</React.Fragment>
