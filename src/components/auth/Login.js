@@ -23,7 +23,7 @@ const Login = (props) => {
 		// 	});
 		// }
 		props.setEmployee(credentials);
-		props.history.push("/home");
+		props.history.push("/offenders");
 	};
 
 	return (
