@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
 import OffenderManager from "../../modules/OffenderManager";
 import "./OffenderForm.css";
-import EmployeeManager from "../../modules/EmployeeManager";
+import LocationManager from "../../modules/LocationManager";
 
 const OffenderEditForm = (props) => {
-	const [offender, setOffender] = useState({ name: "", offense: "" });
-	const [employees, setEmployees] = useState([]);
+	const [offender, setOffender] = useState({
+		name: "",
+		gender: "",
+		age: "",
+		offense: "",
+		date: "",
+		dateEnd: "",
+		locationId: "",
+	});
+	const [local, setLocal] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 
-	const getEmployees = () => {
-		return EmployeeManager.getAll().then((employees) => {
-			setEmployees(employees);
+	const getLocations = () => {
+		return LocationManager.getAll().then((local) => {
+			setLocal(local);
 		});
 	};
 
@@ -28,8 +36,12 @@ const OffenderEditForm = (props) => {
 		const editedOffender = {
 			id: props.match.params.offenderId,
 			name: offender.name,
+			gender: offender.gender,
 			offense: offender.offense,
-			employeeId: parseInt(offender.employeeId),
+			age: offender.age,
+			date: offender.date,
+			dateEnd: offender.dateEnd,
+			locationId: offender.locationId,
 		};
 
 		OffenderManager.update(editedOffender).then(() =>
@@ -45,7 +57,7 @@ const OffenderEditForm = (props) => {
 	}, []);
 
 	useEffect(() => {
-		getEmployees();
+		getLocations();
 	}, []);
 
 	return (
@@ -112,17 +124,17 @@ const OffenderEditForm = (props) => {
 						<label htmlFor="date ends">Date Ban Ends</label>
 						<select
 							className="form-control"
-							id="employeeId"
-							value={offender.employeeId}
+							id="locationId"
+							value={offender.locationId}
 							onChange={handleFieldChange}
 						>
-							{employees.map((employee) => (
-								<option key={employee.id} value={employee.id}>
-									{employee.name}
+							{local.map((local) => (
+								<option key={local.id} value={local.id}>
+									{local.name}
 								</option>
 							))}
 						</select>
-						<label htmlFor="employeeId">Employee</label>
+						<label htmlFor="locationId">Location</label>
 					</div>
 					<div className="alignRight">
 						<button
