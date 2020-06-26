@@ -1,0 +1,12 @@
+.site-title {
+	color: #62625d;
+}
+
+.container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	font-size: 18pt;
+	font-weight: bolder;
+	color: #62625d;
+}
