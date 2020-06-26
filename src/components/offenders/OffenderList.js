@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import OffenderManager from "../../modules/OffenderManager";
 import OffenderCard from "./OffenderCard";
+import "./Offender.css";
 
 const OffenderList = (props) => {
 	const [offenders, setOffenders] = useState([]);
