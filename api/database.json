@@ -1,126 +1,144 @@
 {
-  "employees": [
-    {
-      "id": 7,
-      "employeeName": "Ron Swanson",
-      "email": "no@mhs.com",
-      "password": 1234
-    },
-    {
-      "id": 2,
-      "employeeName": "Jules 'Bad MoFo' Winnfield",
-      "email": "gtfo@mhs.com",
-      "password": 1234
-    },
-    {
-      "id": 1,
-      "employeeName": "Dwight Schrute",
-      "email": "1@mhs.com",
-      "password": 1234
-    }
-  ],
-  "offenders": [
-    {
-      "name": "Sage Klein",
-      "gender": "Female",
-      "age": "29",
-      "offense": "Dancing to Goodbye Horses in the skin care aisle",
-      "date": "1998-01-01",
-      "dateEnd": "2049-01-01",
-      "locationId": "1",
-      "id": 1
-    },
-    {
-      "name": "Bryan Nilsen",
-      "gender": "Male",
-      "age": "42",
-      "offense": "Singing Shout at the Devil to customers in the hallmark card section.",
-      "date": "2020-01-08",
-      "dateEnd": "2020-08-26",
-      "locationId": "2",
-      "id": 3
-    },
-    {
-      "name": "Leigha Robinson",
-      "gender": "Female",
-      "age": "28",
-      "offense": "Cross checking the cart returners",
-      "date": "2017-10-23",
-      "dateEnd": "2021-09-07",
-      "locationId": "1",
-      "id": 6
-    },
-    {
-      "id": 4,
-      "name": "Joe Shepherd",
-      "gender": "Male",
-      "offense": "Narrating customers purchases at checkout like a radio jockey",
-      "age": "48",
-      "date": "2020-06-25",
-      "dateEnd": "2020-10-22",
-      "locationId": "1"
-    },
-    {
-      "name": "Madi Peper",
-      "gender": "Female",
-      "age": "26",
-      "offense": "Intellectual property theft, stole my houchens idea!!!",
-      "date": "2020-06-05",
-      "dateEnd": "2036-10-23",
-      "locationId": "1",
-      "id": 5
-    },
-    {
-      "id": 7,
-      "name": "Adrian Garmendia",
-      "gender": "Male",
-      "offense": "Stole 3.50 and a jawbreaker",
-      "age": "45",
-      "date": "2020-06-01",
-      "dateEnd": "2021-06-01",
-      "locationId": "2"
-    },
-    {
-      "name": "Audrey Borgra",
-      "gender": "Female",
-      "age": "33",
-      "offense": "Taking a job and leaving NSS before we go back to the building!!!!! Made me a sad panda",
-      "date": "2020-06-12",
-      "dateEnd": "2020-07-11",
-      "locationId": "2",
-      "id": 8
-    },
-    {
-      "name": "Roxanne Nastray",
-      "gender": "Female",
-      "age": "26",
-      "offense": "Stole kittens from the adopt a kitten people",
-      "date": "2020-06-05",
-      "dateEnd": "2020-12-11",
-      "locationId": "2",
-      "id": 9
-    },
-    {
-      "name": "Steve Brownlee",
-      "gender": "Male",
-      "age": "48",
-      "offense": "Crimes against humanity, interpretive dance!",
-      "date": "2019-07-30",
-      "dateEnd": "2020-11-30",
-      "locationId": "2",
-      "id": 10
-    }
-  ],
-  "locations": [
-    {
-      "id": 1,
-      "store": "Glasgow",
-      "address": "123 Fais Do-Do Dr"
-    },
-    {
-      "id": 2,
-      "store": "Portland",
-      "address": "123 Rougaroo Dr"
-    }
-  ]
+	"employees": [
+		{
+			"id": 3,
+			"employeeName": "Ron Swanson",
+			"email": "no@mhs.com",
+			"password": 1234
+		},
+		{
+			"id": 2,
+			"employeeName": "Jules 'Bad MoFo' Winnfield",
+			"email": "gtfo@mhs.com",
+			"password": 1234
+		},
+		{
+			"id": 1,
+			"employeeName": "Dwight Schrute",
+			"email": "1@mhs.com",
+			"password": 1234
+		},
+		{
+			"id": 4,
+			"employeeName": "Thomas Magnum",
+			"email": "2@mhs.com",
+			"password": 1234
+		},
+		{
+			"id": 5,
+			"employeeName": "Joe Dirt",
+			"email": "3@mhs.com",
+			"password": 1234
+		},
+		{
+			"id": 6,
+			"employeeName": "Manager Mo",
+			"email": "4@mhs.com",
+			"password": 1234
+		}
+	],
+	"offenders": [
+		{
+			"name": "Sage Klein",
+			"gender": "Female",
+			"age": "29",
+			"offense": "Dancing to Goodbye Horses in the skin care aisle",
+			"date": "1998-01-01",
+			"dateEnd": "2049-01-01",
+			"locationId": "1",
+			"id": 1
+		},
+		{
+			"name": "Bryan Nilsen",
+			"gender": "Male",
+			"age": "42",
+			"offense": "Singing Shout at the Devil to customers in the hallmark card section.",
+			"date": "2020-01-08",
+			"dateEnd": "2020-08-26",
+			"locationId": "2",
+			"id": 3
+		},
+		{
+			"name": "Leigha Robinson",
+			"gender": "Female",
+			"age": "28",
+			"offense": "Cross checking the cart returners",
+			"date": "2017-10-23",
+			"dateEnd": "2021-09-07",
+			"locationId": "1",
+			"id": 6
+		},
+		{
+			"id": 4,
+			"name": "Joe Shepherd",
+			"gender": "Male",
+			"offense": "Narrating customers purchases at checkout like a radio jockey",
+			"age": "48",
+			"date": "2020-06-25",
+			"dateEnd": "2020-10-22",
+			"locationId": "1"
+		},
+		{
+			"name": "Madi Peper",
+			"gender": "Female",
+			"age": "26",
+			"offense": "Intellectual property theft, stole my houchens idea!!!",
+			"date": "2020-06-05",
+			"dateEnd": "2036-10-23",
+			"locationId": "1",
+			"id": 5
+		},
+		{
+			"id": 7,
+			"name": "Adrian Garmendia",
+			"gender": "Male",
+			"offense": "Stole 3.50 and a jawbreaker",
+			"age": "45",
+			"date": "2020-06-01",
+			"dateEnd": "2021-06-01",
+			"locationId": "2"
+		},
+		{
+			"name": "Audrey Borgra",
+			"gender": "Female",
+			"age": "33",
+			"offense": "Taking a job and leaving NSS before we go back to the building!!!!! Made me a sad panda",
+			"date": "2020-06-12",
+			"dateEnd": "2020-07-11",
+			"locationId": "2",
+			"id": 8
+		},
+		{
+			"name": "Roxanne Nastray",
+			"gender": "Female",
+			"age": "26",
+			"offense": "Stole kittens from the adopt a kitten people",
+			"date": "2020-06-05",
+			"dateEnd": "2020-12-11",
+			"locationId": "2",
+			"id": 9
+		},
+		{
+			"name": "Steve Brownlee",
+			"gender": "Male",
+			"age": "48",
+			"offense": "Crimes against humanity, interpretive dance!",
+			"date": "2019-07-30",
+			"dateEnd": "2020-11-30",
+			"locationId": "2",
+			"id": 10
+		}
+	],
+	"locations": [
+		{
+			"id": 1,
+			"store": "Glasgow",
+			"address": "123 Fais Do-Do Dr"
+		},
+		{
+			"id": 2,
+			"store": "Portland",
+			"address": "123 Rougaroo Dr"
+		}
+	]
 }

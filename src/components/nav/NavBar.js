@@ -10,13 +10,18 @@ const NavBar = (props) => {
 	};
 	return (
 		<header>
-			<h1 className="site-title">
-				Ma Houchens Security
-				<br />
-				<small>
-					Keeping things safe until my offspring pyramid scheme pays off.....
-				</small>
-			</h1>
+			<div className="header-style">
+				<picture>
+					<img className="logoImg" src={require("./logo.png")} alt="logo" />
+				</picture>
+				<h1 className="site-title">
+					Ma Houchens Security
+					<br />
+					<small>
+						Keeping things safe until my offspring pyramid scheme pays off.....
+					</small>
+				</h1>
+			</div>
 			<nav>
 				<ul className="container">
 					<li>
