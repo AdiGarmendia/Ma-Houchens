@@ -24,7 +24,7 @@ const EmployeeList = (props) => {
 
 	return (
 		<>
-			<div className="container-cards">
+			<div className="container-employeeCards">
 				{employees.map((employee) => (
 					<EmployeeCard
 						key={employee.id}

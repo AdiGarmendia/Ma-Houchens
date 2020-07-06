@@ -1,5 +1,22 @@
+.header-style {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	padding-top: 2em;
+	padding-left: 2em;
+	padding-right: 5em;
+}
+
+.logoImg {
+	max-width: 175px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+
 .site-title {
 	color: #62625d;
+	margin-left: 5em;
 }
 
 .container {
